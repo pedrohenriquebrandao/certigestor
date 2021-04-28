@@ -72,11 +72,11 @@
 <?php endif; ?>
 
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'cpf','class' => 'block mt-1 w-full','type' => 'text','name' => 'cpf','value' => ''.e($validation->cpf).'','required' => true,'autofocus' => true]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'cpf','class' => 'block mt-1 w-full','type' => 'text','name' => 'cpf','value' => ''.e($validation->cpf).'','autofocus' => true]]); ?>
 <?php $component->withName('input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['id' => 'cpf','class' => 'block mt-1 w-full','type' => 'text','name' => 'cpf','value' => ''.e($validation->cpf).'','required' => true,'autofocus' => true]); ?>
+<?php $component->withAttributes(['id' => 'cpf','class' => 'block mt-1 w-full','type' => 'text','name' => 'cpf','value' => ''.e($validation->cpf).'','autofocus' => true]); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
@@ -101,11 +101,11 @@
 <?php endif; ?>
 
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'cnpj','class' => 'block mt-1 w-full','type' => 'text','name' => 'cnpj','value' => ''.e($validation->cnpj).'','required' => true,'autofocus' => true]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'cnpj','class' => 'block mt-1 w-full','type' => 'text','name' => 'cnpj','value' => ''.e($validation->cnpj).'','autofocus' => true]]); ?>
 <?php $component->withName('input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['id' => 'cnpj','class' => 'block mt-1 w-full','type' => 'text','name' => 'cnpj','value' => ''.e($validation->cnpj).'','required' => true,'autofocus' => true]); ?>
+<?php $component->withAttributes(['id' => 'cnpj','class' => 'block mt-1 w-full','type' => 'text','name' => 'cnpj','value' => ''.e($validation->cnpj).'','autofocus' => true]); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>

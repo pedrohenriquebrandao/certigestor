@@ -47,7 +47,7 @@ class ValidController extends Controller
         return view('validations.show', ['validations'=>$validations]);
     }
 
-    public function update(Request $request, Validation $validation)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'ticket' => 'required',
@@ -60,10 +60,12 @@ class ValidController extends Controller
             'price' => 'required'
         ]);
 
-        $validation->update($request->all());
+        //$validation->update($request->all());
+        $validation = Validation::find($id);    
+        $validation->fill($request->input())->save();
 
         return redirect()->route('validations')
-            ->with('success', 'Project deleted successfully');
+            ->with('success', 'Validação atualizada com sucesso!');
     }
 
     public function destroy(Validation $id)

@@ -34,7 +34,7 @@
                             <x-label for="cpf" :value="__('CPF')" />
 
                             <x-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" value="{{ $validation->cpf }}"
-                                required autofocus />
+                                autofocus />
                         </div>
 
                         <!-- CNPJ -->
@@ -42,7 +42,7 @@
                             <x-label for="cnpj" :value="__('CNPJ')" />
 
                             <x-input id="cnpj" class="block mt-1 w-full" type="text" name="cnpj" value="{{ $validation->cnpj     }}"
-                                required autofocus />
+                                 autofocus />
                         </div>
 
                         <!-- Name -->

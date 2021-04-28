@@ -17,8 +17,8 @@ class CreateValidationsTable extends Migration
             $table->id();
             $table->string('ticket');
             $table->string('name');
-            $table->string('cpf');
-            $table->string('cnpj');
+            $table->string('cpf')->nullable();
+            $table->string('cnpj')->nullable();
             $table->enum('type', ['A1', 'A3']);
             $table->string('phone');
             $table->string('email');
