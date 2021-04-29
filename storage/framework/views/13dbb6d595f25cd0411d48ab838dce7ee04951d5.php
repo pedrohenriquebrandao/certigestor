@@ -45,11 +45,11 @@
 <?php endif; ?>
 
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'ticket','class' => 'block mt-1 w-full','type' => 'text','name' => 'ticket','value' => old('ticket'),'required' => true,'autofocus' => true]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'ticket','class' => 'block mt-1 w-full','type' => 'text','name' => 'ticket','value' => old('ticket'),'autofocus' => true]]); ?>
 <?php $component->withName('input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['id' => 'ticket','class' => 'block mt-1 w-full','type' => 'text','name' => 'ticket','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('ticket')),'required' => true,'autofocus' => true]); ?>
+<?php $component->withAttributes(['id' => 'ticket','class' => 'block mt-1 w-full','type' => 'text','name' => 'ticket','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('ticket')),'autofocus' => true]); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
@@ -119,11 +119,11 @@
                         <!-- Name -->
                         <div class="mt-4">
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'name','value' => __('NOME')]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'name','value' => __('NOME / RAZÃO SOCIAL')]]); ?>
 <?php $component->withName('label'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['for' => 'name','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('NOME'))]); ?>
+<?php $component->withAttributes(['for' => 'name','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('NOME / RAZÃO SOCIAL'))]); ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
@@ -219,13 +219,48 @@
 <?php endif; ?>
 
                             <div class="mt-2">
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio" name="type" value="A1">
-                                    <span class="ml-2">A1</span>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CNPJ A1">
+                                    <span class="ml-2">e-CNPJ A1</span>
                                 </label>
-                                <label class="inline-flex items-center ml-6">
-                                    <input type="radio" class="form-radio" name="type" value="A3">
-                                    <span class="ml-2">A3</span>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CNPJ A3">
+                                    <span class="ml-2">e-CNPJ A3</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CPF A1">
+                                    <span class="ml-2">e-CPF A1</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CPF A3">
+                                    <span class="ml-2">e-CPF A3</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Validity -->
+                        <div class="mt-4">
+                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'validity','value' => __('VALIDADE')]]); ?>
+<?php $component->withName('label'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['for' => 'validity','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('VALIDADE'))]); ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+
+                            <div class="mt-2">
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="1 ano">
+                                    <span class="ml-2">1 ano</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="3 anos">
+                                    <span class="ml-2">3 anos</span>
                                 </label>
                             </div>
                         </div>

@@ -28,7 +28,7 @@
                             <x-label for="ticket" :value="__('TICKET')" />
 
                             <x-input id="ticket" class="block mt-1 w-full" type="text" name="ticket"
-                                :value="old('ticket')" required autofocus />
+                                :value="old('ticket')" autofocus />
                         </div>
 
                         <!-- CPF -->
@@ -44,12 +44,12 @@
                             <x-label for="cnpj" :value="__('CNPJ')" />
 
                             <x-input id="cnpj" class="block mt-1 w-full" type="text" name="cnpj" :value="old('cnpj')"
-                                 autofocus />
+                                autofocus />
                         </div>
 
                         <!-- Name -->
                         <div class="mt-4">
-                            <x-label for="name" :value="__('NOME')" />
+                            <x-label for="name" :value="__('NOME / RAZÃO SOCIAL')" />
 
                             <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
                                 required autofocus />
@@ -76,13 +76,37 @@
                             <x-label for="type" :value="__('MODELO DE CERTIFICADO')" />
 
                             <div class="mt-2">
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio" name="type" value="A1">
-                                    <span class="ml-2">A1</span>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CNPJ A1">
+                                    <span class="ml-2">e-CNPJ A1</span>
                                 </label>
-                                <label class="inline-flex items-center ml-6">
-                                    <input type="radio" class="form-radio" name="type" value="A3">
-                                    <span class="ml-2">A3</span>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CNPJ A3">
+                                    <span class="ml-2">e-CNPJ A3</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CPF A1">
+                                    <span class="ml-2">e-CPF A1</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="type" value="e-CPF A3">
+                                    <span class="ml-2">e-CPF A3</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Validity -->
+                        <div class="mt-4">
+                            <x-label for="validity" :value="__('VALIDADE')" />
+
+                            <div class="mt-2">
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="1 ano">
+                                    <span class="ml-2">1 ano</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="3 anos">
+                                    <span class="ml-2">3 anos</span>
                                 </label>
                             </div>
                         </div>

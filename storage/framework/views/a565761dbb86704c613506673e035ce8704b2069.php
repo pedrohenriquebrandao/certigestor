@@ -15,7 +15,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-6">
             <div>
                 <button onclick="window.location.href = '<?php echo e(route("validations")); ?>'"
-                    class="bg-green-500 hover:bg-green-800 text-gray-100 font-bold py-2 px-4 items-center">
+                    class="bg-purple-500 hover:bg-purple-800 text-gray-100 font-bold py-2 px-4 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -43,6 +43,7 @@
 
                                 </p>
                             </div>
+                            <?php if($validation->cpf != null): ?>
                             <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2 border-b">
                                 <p class="text-gray-600">
                                     <b>CPF</b>
@@ -52,15 +53,18 @@
 
                                 </p>
                             </div>
+                            <?php endif; ?>
+                            <?php if($validation->cnpj != null): ?>
                             <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2 border-b">
                                 <p class="text-gray-600">
                                     <b>CNPJ</b>
                                 </p>
                                 <p>
-                                    <?php echo e($validation->cnpj); ?>
+                                        <?php echo e($validation->cnpj); ?>
 
                                 </p>
                             </div>
+                            <?php endif; ?>
                             <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2 border-b">
                                 <p class="text-gray-600">
                                     <b>Telefone</b>
@@ -90,6 +94,7 @@
                                 </p>
                             </div>
                         </div>
+                        <!-- Validity -->
                         <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2 border-b">
                             <p class="text-gray-600">
                                 <b>Validade</b>
@@ -99,12 +104,23 @@
 
                             </p>
                         </div>
+                        <!-- Price -->
                         <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2">
                             <p class="text-gray-600">
                                 <b>Valor</b>
                             </p>
                             <p>
                                 <?php echo e($validation->price); ?>
+
+                            </p>
+                        </div>
+                        <!-- Date -->
+                        <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2">
+                            <p class="text-gray-600">
+                                <b>Data de emissão</b>
+                            </p>
+                            <p>
+                                <?php echo e($validation->created_at->format('d/m/Y')); ?>
 
                             </p>
                         </div>

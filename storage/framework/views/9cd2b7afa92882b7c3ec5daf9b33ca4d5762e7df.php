@@ -218,22 +218,37 @@
 
                             <div class="mt-2">
                                 <label class="inline-flex items-center">
-                                    <?php if($validation->type=='A1'): ?>
-                                    <input type="radio" class="form-radio" name="type" value="A1" checked>
-                                    <span class="ml-2">A1</span>
-                                    <?php else: ?>
-                                    <input type="radio" class="form-radio" name="type" value="A1">
-                                    <span class="ml-2">A1</span>
-                                    <?php endif; ?>
+                                   <p>
+                                       <?php echo e($validation->type); ?>
+
+                                   </p>
                                 </label>
-                                <label class="inline-flex items-center ml-6">
-                                    <?php if($validation->type=='A3'): ?>
-                                    <input type="radio" class="form-radio" name="type" value="A3" checked>
-                                    <span class="ml-2">A3</span>
-                                    <?php else: ?>
-                                    <input type="radio" class="form-radio" name="type" value="A3">
-                                    <span class="ml-2">A3</span>
-                                    <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <!-- Validity -->
+                        <div class="mt-4">
+                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'validity','value' => __('VALIDADE')]]); ?>
+<?php $component->withName('label'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['for' => 'validity','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('VALIDADE'))]); ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+
+                            <div class="mt-2">
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="1 ano" <?php echo e($validation->validity == "1 ano" ? 'checked' : ''); ?>>
+                                    <span class="ml-2">1 ano</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="3 anos" <?php echo e($validation->validity == "3 anos" ? 'checked' : ''); ?>>
+                                    <span class="ml-2">3 anos</span>
                                 </label>
                             </div>
                         </div>

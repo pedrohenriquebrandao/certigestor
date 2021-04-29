@@ -75,22 +75,25 @@
 
                             <div class="mt-2">
                                 <label class="inline-flex items-center">
-                                    @if($validation->type=='A1')
-                                    <input type="radio" class="form-radio" name="type" value="A1" checked>
-                                    <span class="ml-2">A1</span>
-                                    @else
-                                    <input type="radio" class="form-radio" name="type" value="A1">
-                                    <span class="ml-2">A1</span>
-                                    @endif
+                                   <p>
+                                       {{ $validation->type }}
+                                   </p>
                                 </label>
-                                <label class="inline-flex items-center ml-6">
-                                    @if($validation->type=='A3')
-                                    <input type="radio" class="form-radio" name="type" value="A3" checked>
-                                    <span class="ml-2">A3</span>
-                                    @else
-                                    <input type="radio" class="form-radio" name="type" value="A3">
-                                    <span class="ml-2">A3</span>
-                                    @endif
+                            </div>
+                        </div>
+
+                        <!-- Validity -->
+                        <div class="mt-4">
+                            <x-label for="validity" :value="__('VALIDADE')" />
+
+                            <div class="mt-2">
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="1 ano" {{ $validation->validity == "1 ano" ? 'checked' : '' }}>
+                                    <span class="ml-2">1 ano</span>
+                                </label>
+                                <label class="inline-flex items-center mr-6">
+                                    <input type="radio" class="form-radio" name="validity" value="3 anos" {{ $validation->validity == "3 anos" ? 'checked' : '' }}>
+                                    <span class="ml-2">3 anos</span>
                                 </label>
                             </div>
                         </div>

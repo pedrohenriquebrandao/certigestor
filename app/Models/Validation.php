@@ -16,6 +16,7 @@ class Validation extends Model
         'cnpj',
         'phone',
         'email',
+        'type',
         'validity',
         'price'
     ];
