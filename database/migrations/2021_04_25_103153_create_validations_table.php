@@ -19,11 +19,11 @@ class CreateValidationsTable extends Migration
             $table->string('name');
             $table->string('cpf')->nullable();
             $table->string('cnpj')->nullable();
-            $table->enum('type', ['e-CNPJ A1', 'e-CNPJ A3', 'e-CPF A1', 'e-CPF A3']);
+            $table->string('type');
             $table->string('phone');
             $table->string('email');
+            $table->string('validity');
             $table->string('price');
-            $table->enum('validity', ['1 ano', '3 anos']);
             $table->timestamps();
         });
     }

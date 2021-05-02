@@ -27,7 +27,6 @@ class ValidController extends Controller
             'phone' => 'required',
             'email' => 'required|email',
             'type' => 'required',
-            'validity' => 'required',
             'price' => 'required'
         ]);
 
@@ -57,8 +56,8 @@ class ValidController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
-            'type' => 'required',
-            'validity' => 'required',
+            'type',
+            'validity',
             'price' => 'required'
         ]);
 
