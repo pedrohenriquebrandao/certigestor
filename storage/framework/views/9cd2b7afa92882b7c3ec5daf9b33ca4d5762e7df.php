@@ -14,9 +14,12 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-6">
             <div>
-                <button onclick="window.location.href = '<?php echo e(route("validations")); ?>'" class="bg-green-500 hover:bg-green-800 text-gray-100 font-bold py-2 px-4 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                <button onclick="window.location.href = '<?php echo e(route("validations")); ?>'"
+                    class="bg-green-500 hover:bg-green-800 text-gray-100 font-bold py-2 px-4 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 16l-4-4m0 0l4-4m-4 4h18" />
                     </svg>
                     <span>Voltar</span>
                 </button>
@@ -56,6 +59,7 @@
 <?php endif; ?>
                         </div>
 
+                        <?php if($validation->cpf != null): ?>
                         <!-- CPF -->
                         <div class="mt-4">
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
@@ -84,7 +88,8 @@
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
                         </div>
-
+                        <?php endif; ?>
+                        <?php if($validation->cnpj != null): ?>
                         <!-- CNPJ -->
                         <div class="mt-4">
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
@@ -113,7 +118,7 @@
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
                         </div>
-
+                        <?php endif; ?>
                         <!-- Name -->
                         <div class="mt-4">
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
@@ -201,30 +206,6 @@
 <?php endif; ?>
                         </div>
 
-                        <!-- Type -->
-                        <div class="mt-4">
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'type','value' => __('MODELO DE CERTIFICADO')]]); ?>
-<?php $component->withName('label'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['for' => 'type','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('MODELO DE CERTIFICADO'))]); ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-
-                            <div class="mt-2">
-                                <label class="inline-flex items-center">
-                                   <p>
-                                       <?php echo e($validation->type); ?>
-
-                                   </p>
-                                </label>
-                            </div>
-                        </div>
 
                         <!-- Validity -->
                         <div class="mt-4">
@@ -243,11 +224,13 @@
 
                             <div class="mt-2">
                                 <label class="inline-flex items-center mr-6">
-                                    <input type="radio" class="form-radio" name="validity" value="1 ano" <?php echo e($validation->validity == "1 ano" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-radio" name="validity" value="1 ano"
+                                        <?php echo e($validation->validity == "1 ano" ? 'checked' : ''); ?>>
                                     <span class="ml-2">1 ano</span>
                                 </label>
                                 <label class="inline-flex items-center mr-6">
-                                    <input type="radio" class="form-radio" name="validity" value="3 anos" <?php echo e($validation->validity == "3 anos" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-radio" name="validity" value="3 anos"
+                                        <?php echo e($validation->validity == "3 anos" ? 'checked' : ''); ?>>
                                     <span class="ml-2">3 anos</span>
                                 </label>
                             </div>

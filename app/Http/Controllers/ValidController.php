@@ -79,4 +79,19 @@ class ValidController extends Controller
             ->with('success', 'Validação removida com sucesso!');
     }
 
+    public function search(Request $request)
+    {   
+        // Get the search value from the request
+        $search = $request->input('search');
+    
+        // Search in the title and body columns from the posts table
+        $validations = Validation::query()
+            ->where('name', 'LIKE', "%{$search}%")
+            ->orWhere('ticket', 'LIKE', "%{$search}%")
+            ->get();
+    
+        // Return the search view with the resluts compacted
+        return view('validations.search', ['validations'=>$validations]);
+    }
+
 }

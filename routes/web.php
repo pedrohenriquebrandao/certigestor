@@ -25,6 +25,7 @@ Route::get('/validations/show/{id}', [App\Http\Controllers\ValidController::clas
 Route::post('/validations/store', [App\Http\Controllers\ValidController::class, 'store'])->name('validations.store');
 Route::get('/validations/destroy/{id}', [App\Http\Controllers\ValidController::class, 'destroy'])->name('validations.destroy');
 Route::post('/validations/update/{id}', [App\Http\Controllers\ValidController::class, 'update'])->name('validations.update');
+Route::get('/validations/search', [App\Http\Controllers\ValidController::class, 'search'])->name('validations.search');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

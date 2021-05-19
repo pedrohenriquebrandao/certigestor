@@ -51,7 +51,7 @@
                                     <b>CNPJ</b>
                                 </p>
                                 <p>
-                                        {{ $validation->cnpj }}
+                                    {{ $validation->cnpj }}
                                 </p>
                             </div>
                             @endif
@@ -81,7 +81,8 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Validity -->
+
+                        <!-- Price -->
                         <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2 border-b">
                             <p class="text-gray-600">
                                 <b>Validade</b>
@@ -90,8 +91,9 @@
                                 {{ $validation->validity }}
                             </p>
                         </div>
-                        <!-- Price -->
-                        <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2">
+
+                        <!-- Validity -->
+                        <div class="md:grid-cols-2 hover:bg-gray-100 md:space-y-0 space-y-1 p-2 border-b">
                             <p class="text-gray-600">
                                 <b>Valor</b>
                             </p>
