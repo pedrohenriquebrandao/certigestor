@@ -88,6 +88,8 @@ class ValidController extends Controller
         $validations = Validation::query()
             ->where('name', 'LIKE', "%{$search}%")
             ->orWhere('ticket', 'LIKE', "%{$search}%")
+            ->orWhere('cnpj', 'LIKE', "%{$search}%")
+            ->orWhere('cpf', 'LIKE', "%{$search}%")
             ->get();
     
         // Return the search view with the resluts compacted
